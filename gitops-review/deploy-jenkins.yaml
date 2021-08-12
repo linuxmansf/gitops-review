@@ -11,7 +11,7 @@
       src: "{{ playbook_dir + '/resources/project.yaml' }}"
 
   - name: Proccess the Jenkins standard template
-    shell: "oc process FIX-ME -n openshift -o yaml"
+    shell: "oc process jenkins-persistent -n openshift -o yaml"
     register: template_resources
 
   - name: Deploy Jenkins using resources from the standard template
